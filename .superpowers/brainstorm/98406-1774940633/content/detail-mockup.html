@@ -1,0 +1,119 @@
+<h2>Project Detail Page — Full Mockup</h2>
+<p class="subtitle">Editorial sidebar layout. All sections below "Overview" are optional — hidden if no data.</p>
+
+<div class="mockup">
+  <div class="mockup-header">http://localhost:5173/projects/renewable-energy</div>
+  <div class="mockup-body" style="background:#fff5eb;font-family:'Inter',sans-serif;color:#332e28;">
+
+    <!-- HERO SECTION (dots pattern bg, same as other pages) -->
+    <div style="background:#110e08;background-image:radial-gradient(circle,rgba(255,255,255,0.06) 1px,transparent 1px);background-size:20px 20px;padding:40px 32px 32px;position:relative;">
+      <!-- Back button -->
+      <div style="margin-bottom:20px;">
+        <span style="font-family:'Space Grotesk',monospace;font-size:11px;color:#fff5eb;letter-spacing:1px;cursor:pointer;border-bottom:1px solid rgba(255,245,235,0.3);padding-bottom:2px;">← BACK TO PROJECTS</span>
+      </div>
+      <!-- Category chip + Status chip -->
+      <div style="display:flex;gap:8px;margin-bottom:14px;align-items:center;">
+        <span style="background:#00a3ff;color:#fff;font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:1px;padding:4px 10px;font-weight:600;">SUSTAINABILITY</span>
+        <span style="background:#110e08;color:#fff5eb;font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:1px;padding:4px 10px;border:2px solid #fef9c3;font-weight:600;">● ACTIVE</span>
+      </div>
+      <!-- Title row -->
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
+        <span style="font-size:36px;">⚡</span>
+        <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.5rem;font-weight:800;color:#fff5eb;margin:0;line-height:1.1;">Renewable Energy Mapping</h1>
+      </div>
+      <!-- Tags -->
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="background:#332e28;color:#fff5eb;font-family:'Space Grotesk',monospace;font-size:11px;padding:4px 10px;">Python</span>
+        <span style="background:#332e28;color:#fff5eb;font-family:'Space Grotesk',monospace;font-size:11px;padding:4px 10px;">GIS</span>
+        <span style="background:#332e28;color:#fff5eb;font-family:'Space Grotesk',monospace;font-size:11px;padding:4px 10px;">Tableau</span>
+      </div>
+    </div>
+
+    <!-- HERO IMAGE (optional) -->
+    <div style="width:100%;height:200px;background:linear-gradient(135deg,#0077cc,#00a3ff,#332e28);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:12px;letter-spacing:2px;">PROJECT IMAGE (optional)</div>
+
+    <!-- TWO-COLUMN BODY -->
+    <div style="display:flex;gap:0;padding:0;">
+
+      <!-- MAIN COLUMN -->
+      <div style="flex:2;padding:28px 24px 28px 32px;border-right:2px solid #e6dbcf;">
+
+        <!-- OVERVIEW -->
+        <div style="margin-bottom:32px;">
+          <div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:2px;color:#00a3ff;margin-bottom:10px;font-weight:600;">OVERVIEW</div>
+          <p style="font-size:0.95rem;line-height:1.7;margin:0;color:#332e28;">Developing a geospatial dashboard to identify optimal locations for micro-grid solar installations across Virginia's rural counties. This project partners with the Virginia Department of Energy to deliver actionable infrastructure recommendations.</p>
+        </div>
+
+        <!-- METHODOLOGY (optional) -->
+        <div style="margin-bottom:32px;">
+          <div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:2px;color:#00a3ff;margin-bottom:10px;font-weight:600;">METHODOLOGY</div>
+          <div style="border-left:4px solid #e6dbcf;padding-left:16px;">
+            <p style="font-size:0.9rem;line-height:1.7;margin:0 0 8px;color:#332e28;">We aggregated satellite imagery, county energy consumption records, and topographical data to build a composite suitability score for each census tract. A gradient boosting model (XGBoost) was trained on known solar farm locations to validate the scoring system.</p>
+            <p style="font-size:0.9rem;line-height:1.7;margin:0;color:#332e28;">Visualizations were built in Tableau and embedded in a public-facing dashboard accessible to county planners.</p>
+          </div>
+        </div>
+
+        <!-- OUTCOMES (optional) -->
+        <div>
+          <div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:2px;color:#00a3ff;margin-bottom:10px;font-weight:600;">OUTCOMES & IMPACT</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:#110e08;color:#fff5eb;padding:16px;box-shadow:4px 4px 0 #00a3ff;">
+              <div style="font-size:1.8rem;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;color:#00a3ff;">12</div>
+              <div style="font-family:'Space Grotesk',monospace;font-size:10px;letter-spacing:1px;margin-top:4px;color:#fff5eb;">Counties mapped</div>
+            </div>
+            <div style="background:#110e08;color:#fff5eb;padding:16px;box-shadow:4px 4px 0 #00a3ff;">
+              <div style="font-size:1.8rem;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;color:#00a3ff;">340+</div>
+              <div style="font-family:'Space Grotesk',monospace;font-size:10px;letter-spacing:1px;margin-top:4px;color:#fff5eb;">Optimal sites identified</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div style="flex:1;padding:28px 20px;background:#f9efe4;display:flex;flex-direction:column;gap:24px;">
+
+        <!-- TEAM (optional) -->
+        <div>
+          <div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:2px;color:#7d766e;margin-bottom:10px;font-weight:600;">TEAM</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="background:#332e28;color:#fff5eb;padding:8px 10px;">
+              <div style="font-size:0.8rem;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;">Alex Chen</div>
+              <div style="font-family:'Space Grotesk',monospace;font-size:10px;color:#7d766e;margin-top:2px;">Project Lead</div>
+            </div>
+            <div style="background:#332e28;color:#fff5eb;padding:8px 10px;">
+              <div style="font-size:0.8rem;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;">Maya Patel</div>
+              <div style="font-family:'Space Grotesk',monospace;font-size:10px;color:#7d766e;margin-top:2px;">GIS Analyst</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TECH STACK -->
+        <div>
+          <div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:2px;color:#7d766e;margin-bottom:10px;font-weight:600;">TECH STACK</div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <span style="background:#110e08;color:#fff5eb;font-family:'Space Grotesk',monospace;font-size:11px;padding:5px 10px;display:inline-block;">Python</span>
+            <span style="background:#110e08;color:#fff5eb;font-family:'Space Grotesk',monospace;font-size:11px;padding:5px 10px;display:inline-block;">GIS</span>
+            <span style="background:#110e08;color:#fff5eb;font-family:'Space Grotesk',monospace;font-size:11px;padding:5px 10px;display:inline-block;">Tableau</span>
+          </div>
+        </div>
+
+        <!-- CATEGORY / STATUS metadata -->
+        <div style="border-top:2px solid #e6dbcf;padding-top:16px;">
+          <div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:2px;color:#7d766e;margin-bottom:8px;font-weight:600;">DETAILS</div>
+          <div style="font-size:0.8rem;margin-bottom:4px;"><span style="color:#7d766e;">Category:</span> Sustainability</div>
+          <div style="font-size:0.8rem;"><span style="color:#7d766e;">Status:</span> <span style="color:#00a3ff;font-weight:600;">Active</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BACK BUTTON (bottom) -->
+    <div style="padding:24px 32px;border-top:2px solid #e6dbcf;">
+      <span style="background:#332e28;color:#fff5eb;font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:1px;padding:10px 20px;cursor:pointer;display:inline-block;box-shadow:4px 4px 0 #110e08;">← BACK TO ALL PROJECTS</span>
+    </div>
+
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:16px;">Does this layout and visual feel right? Let me know what to change before I write the spec.</p>

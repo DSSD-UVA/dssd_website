@@ -1,0 +1,123 @@
+<h2>Project Detail Page — Layout Direction</h2>
+<p class="subtitle">Pick the layout that best fits the "Academic Brutalist" design system</p>
+
+<div class="cards">
+
+  <!-- Option A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1a1a2e;padding:16px;font-family:monospace;font-size:11px;color:#aaa;">
+      <div style="background:#00a3ff;color:#fff;padding:6px 10px;margin-bottom:8px;font-weight:bold;letter-spacing:1px;">RENEWABLE ENERGY MAPPING / ACTIVE</div>
+      <div style="background:#fff5eb;color:#332e28;padding:10px;margin-bottom:6px;">
+        <div style="font-size:13px;font-weight:bold;color:#332e28;">Full-bleed hero image with title overlay</div>
+        <div style="font-size:10px;color:#7d766e;margin-top:2px;">Tags · Category · Status chips</div>
+      </div>
+      <div style="display:flex;gap:6px;">
+        <div style="flex:2;background:#f1e6db;padding:8px;color:#332e28;font-size:10px;">
+          <div style="font-weight:bold;margin-bottom:4px;">OVERVIEW</div>
+          <div style="height:4px;background:#332e28;margin-bottom:3px;width:90%"></div>
+          <div style="height:4px;background:#332e28;margin-bottom:3px;width:75%"></div>
+          <div style="height:4px;background:#332e28;width:85%"></div>
+          <div style="margin-top:8px;font-weight:bold;">METHODOLOGY</div>
+          <div style="height:4px;background:#7d766e;margin-top:4px;margin-bottom:3px;width:80%"></div>
+          <div style="height:4px;background:#7d766e;width:70%"></div>
+          <div style="margin-top:8px;font-weight:bold;">OUTCOMES</div>
+          <div style="height:4px;background:#7d766e;margin-top:4px;width:60%"></div>
+        </div>
+        <div style="flex:1;background:#e6dbcf;padding:8px;color:#332e28;font-size:10px;">
+          <div style="font-weight:bold;margin-bottom:4px;">TEAM</div>
+          <div style="height:24px;background:#332e28;margin-bottom:4px;display:flex;align-items:center;padding:0 4px;color:#fff;font-size:9px;">Member 1</div>
+          <div style="height:24px;background:#332e28;margin-bottom:4px;display:flex;align-items:center;padding:0 4px;color:#fff;font-size:9px;">Member 2</div>
+          <div style="margin-top:8px;font-weight:bold;">STACK</div>
+          <div style="background:#110e08;color:#fff;padding:3px 5px;margin-top:4px;font-size:9px;display:inline-block;">Python</div>
+          <div style="background:#110e08;color:#fff;padding:3px 5px;margin-top:3px;font-size:9px;display:inline-block;">GIS</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Editorial Sidebar</h3>
+      <p>Hero image up top, then a two-column layout: wide main column (overview, methodology, outcomes) + narrow sticky sidebar (team, tech stack). Classic academic paper feel.</p>
+    </div>
+  </div>
+
+  <!-- Option B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1a1a2e;padding:16px;font-family:monospace;font-size:11px;color:#aaa;">
+      <div style="background:#00a3ff;color:#fff;padding:6px 10px;margin-bottom:8px;font-weight:bold;letter-spacing:1px;">← BACK TO PROJECTS</div>
+      <div style="background:#fff5eb;color:#332e28;padding:10px;margin-bottom:6px;border-left:4px solid #00a3ff;">
+        <div style="font-size:16px;font-weight:bold;">⚡ Renewable Energy Mapping</div>
+        <div style="font-size:10px;color:#7d766e;margin-top:2px;">ACTIVE · Sustainability · Python · GIS · Tableau</div>
+      </div>
+      <div style="background:#f1e6db;padding:8px;margin-bottom:6px;color:#332e28;font-size:10px;">
+        <div style="font-weight:bold;margin-bottom:3px;">OVERVIEW</div>
+        <div style="height:4px;background:#332e28;margin-bottom:3px;width:90%"></div>
+        <div style="height:4px;background:#332e28;width:75%"></div>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+        <div style="flex:1;background:#110e08;color:#fff5eb;padding:8px;font-size:10px;">
+          <div style="color:#00a3ff;font-weight:bold;font-size:13px;">18%</div>
+          <div style="font-size:9px;margin-top:2px;">Transit gap reduction</div>
+        </div>
+        <div style="flex:1;background:#110e08;color:#fff5eb;padding:8px;font-size:10px;">
+          <div style="color:#00a3ff;font-weight:bold;font-size:13px;">4</div>
+          <div style="font-size:9px;margin-top:2px;">Team members</div>
+        </div>
+        <div style="flex:1;background:#110e08;color:#fff5eb;padding:8px;font-size:10px;">
+          <div style="color:#00a3ff;font-weight:bold;font-size:13px;">12mo</div>
+          <div style="font-size:9px;margin-top:2px;">Duration</div>
+        </div>
+      </div>
+      <div style="background:#f1e6db;padding:8px;color:#332e28;font-size:10px;">
+        <div style="font-weight:bold;margin-bottom:3px;">METHODOLOGY → OUTCOMES → TEAM</div>
+        <div style="height:4px;background:#7d766e;margin-bottom:3px;width:80%"></div>
+        <div style="height:4px;background:#7d766e;width:65%"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Single Column, Data-First</h3>
+      <p>No sidebar. Full-width sections stacked vertically: header → key metrics row (dark panels) → overview → methodology → outcomes → team. Very clean, editorial data-science feel.</p>
+    </div>
+  </div>
+
+  <!-- Option C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1a1a2e;padding:16px;font-family:monospace;font-size:11px;color:#aaa;">
+      <div style="background:#fff5eb;height:50px;display:flex;align-items:center;justify-content:center;margin-bottom:6px;position:relative;">
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,#110e08 50%,#00a3ff 100%);opacity:0.9;"></div>
+        <div style="position:relative;color:#fff;font-weight:bold;font-size:13px;">⚡ RENEWABLE ENERGY MAPPING</div>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+        <div style="flex:3;background:#fff5eb;padding:8px;color:#332e28;font-size:10px;">
+          <div style="height:4px;background:#332e28;margin-bottom:3px;width:90%"></div>
+          <div style="height:4px;background:#332e28;width:75%"></div>
+          <div style="margin-top:6px;display:flex;gap:4px;">
+            <div style="background:#110e08;color:#fff;padding:2px 5px;font-size:9px;">Python</div>
+            <div style="background:#110e08;color:#fff;padding:2px 5px;font-size:9px;">GIS</div>
+          </div>
+        </div>
+        <div style="flex:1;background:#110e08;color:#fff5eb;padding:8px;font-size:9px;text-align:center;">
+          <div style="color:#00a3ff;font-weight:bold;font-size:14px;">●</div>
+          <div>ACTIVE</div>
+        </div>
+      </div>
+      <div style="background:#110e08;color:#fff5eb;padding:8px;margin-bottom:6px;font-size:10px;">
+        <div style="display:flex;justify-content:space-between;">
+          <span>18% gap reduction</span><span style="color:#00a3ff;">↑</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:4px;">
+          <span>4 contributors</span><span style="color:#00a3ff;">↑</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+        <div style="background:#f1e6db;padding:6px;color:#332e28;font-size:9px;font-weight:bold;">METHODOLOGY</div>
+        <div style="background:#e6dbcf;padding:6px;color:#332e28;font-size:9px;font-weight:bold;">TEAM</div>
+        <div style="background:#e6dbcf;padding:6px;color:#332e28;font-size:9px;font-weight:bold;">OUTCOMES</div>
+        <div style="background:#f1e6db;padding:6px;color:#332e28;font-size:9px;font-weight:bold;">STACK</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Bento / Asymmetric Grid</h3>
+      <p>Dark gradient hero, then a mixed-size grid of content blocks. Bold brutalist layout — each section is its own panel. More visually loud, more "data dashboard" energy.</p>
+    </div>
+  </div>
+
+</div>

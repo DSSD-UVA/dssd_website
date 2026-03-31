@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --surface: #fff5eb;
+    --surface-container-low: #f9efe4;
+    --surface-container: #f1e6db;
+    --surface-container-high: #ece1d5;
+    --surface-container-highest: #e6dbcf;
+    --on-background: #332e28;
+    --on-surface-variant: #615b53;
+    --inverse-surface: #110e08;
+    --primary: #00a3ff;
+    --primary-container: #0077cc;
+    --on-primary: #ffffff;
+    --secondary: #fef9c3;
+    --secondary-container: #fef9c3;
+    --on-secondary-container: #332e28;
+    --outline: #7d766e;
+    --outline-variant: #b4aca3;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-label: 'Space Grotesk', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #1e1e2e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: var(--font-body);
+  }
+
+  .browser-bar {
+    font-family: var(--font-label);
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    width: 100%;
+    max-width: 920px;
+  }
+
+  .page {
+    background: var(--surface);
+    width: 100%;
+    max-width: 920px;
+    color: var(--on-background);
+  }
+
+  /* NAV */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 56px;
+    border-bottom: 2px solid var(--outline);
+    box-shadow: 4px 4px 0 var(--on-background);
+  }
+  .nav-brand {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+  }
+  .nav-links { display: flex; gap: 18px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; }
+  .nav-link-active { color: var(--primary); border-bottom: 3px solid var(--primary); padding-bottom: 2px; }
+  .nav-link { color: var(--on-background); opacity: 0.7; }
+  .nav-actions { display: flex; gap: 8px; }
+  .nav-btn {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border: 2px solid var(--on-background);
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--on-background);
+  }
+  .nav-btn-primary { background: var(--primary); color: var(--on-primary); }
+  .nav-btn-secondary { background: var(--surface-container-highest); color: var(--on-background); }
+
+  /* HEADER */
+  .header { padding: 28px 24px 0; }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-label);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    text-decoration: none;
+  }
+  .back-link .material-symbols-outlined { font-size: 16px; }
+  .chips-row { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+  .chip-secondary {
+    background: var(--secondary-container);
+    color: var(--on-secondary-container);
+    font-family: var(--font-label);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 2px solid var(--on-background);
+  }
+  .chip-surface {
+    background: var(--surface-container-high);
+    color: var(--on-background);
+    font-family: var(--font-label);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 2px solid var(--on-background);
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .page-title-icon { font-size: 2.5rem; color: var(--secondary-container); }
+  .tags-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
+  .tag-dark {
+    background: var(--inverse-surface);
+    color: var(--surface);
+    font-family: var(--font-label);
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+
+  /* MAIN GRID */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    padding: 0 24px;
+  }
+
+  /* HERO IMAGE */
+  .hero-image {
+    position: relative;
+    aspect-ratio: 16/9;
+    border: 4px solid var(--on-background);
+    background: var(--primary);
+    overflow: hidden;
+    box-shadow: 4px 4px 0 var(--on-background);
+    margin-bottom: 32px;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+  }
+  .hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top right, rgba(0,163,255,0.4), transparent);
+  }
+  .hero-image-card {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: var(--surface);
+    padding: 10px 14px;
+    border: 2px solid var(--on-background);
+    box-shadow: 4px 4px 0 var(--on-background);
+    max-width: 220px;
+  }
+  .hero-image-card-label {
+    font-family: var(--font-label);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .hero-image-card-text {
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* SECTIONS */
+  .section { margin-bottom: 36px; }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    display: inline-block;
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 14px;
+  }
+  .section-text {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--on-surface-variant);
+  }
+
+  /* METHODOLOGY CARD */
+  .method-card {
+    background: var(--surface-container);
+    padding: 24px;
+    border: 2px solid var(--on-background);
+    position: relative;
+    margin-bottom: 36px;
+  }
+  .method-card-badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: var(--primary);
+    color: var(--on-primary);
+    padding: 6px;
+    border: 2px solid var(--on-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .method-card-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .method-card-text {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--on-surface-variant);
+  }
+  .method-card-text + .method-card-text { margin-top: 10px; }
+
+  /* OUTCOMES */
+  .outcomes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .outcome-card {
+    padding: 20px;
+    border: 4px solid var(--on-background);
+    box-shadow: 4px 4px 0 var(--on-background);
+  }
+  .outcome-card-yellow { background: var(--secondary-container); }
+  .outcome-card-blue { background: var(--primary); }
+  .outcome-value {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  .outcome-card-yellow .outcome-value { color: var(--on-background); }
+  .outcome-card-blue .outcome-value { color: var(--on-primary); }
+  .outcome-label {
+    font-family: var(--font-label);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .outcome-card-yellow .outcome-label { color: var(--on-background); }
+  .outcome-card-blue .outcome-label { color: var(--on-primary); }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+  .sidebar-card {
+    border: 2px solid var(--on-background);
+    padding: 18px;
+  }
+  .sidebar-card-dotted {
+    background-image: radial-gradient(var(--outline) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+  .sidebar-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+  }
+  .sidebar-title-bg {
+    background: var(--surface);
+    display: inline-block;
+    padding: 0 4px;
+  }
+
+  .team-member {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    padding: 8px;
+    border: 2px solid var(--on-background);
+    margin-bottom: 8px;
+  }
+  .team-avatar {
+    width: 36px;
+    height: 36px;
+    border: 2px solid var(--on-background);
+    flex-shrink: 0;
+  }
+  .team-avatar-primary { background: var(--primary); }
+  .team-avatar-secondary { background: var(--secondary-container); }
+  .team-name { font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; }
+  .team-role { font-family: var(--font-label); font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--on-surface-variant); opacity: 0.7; }
+
+  .stack-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-label);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  .stack-dot { width: 6px; height: 6px; background: var(--on-background); }
+
+  .details-card { background: var(--surface-container-high); }
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--outline);
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+  }
+  .detail-label { font-family: var(--font-label); font-size: 9px; text-transform: uppercase; opacity: 0.5; letter-spacing: 1px; }
+  .detail-value { font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; }
+
+  .cta-card {
+    background: var(--inverse-surface);
+    color: var(--surface);
+    padding: 24px;
+    box-shadow: 4px 4px 0 var(--on-background);
+    border: none;
+  }
+  .cta-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .cta-text {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .cta-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: var(--on-primary);
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* FOOTER BACK BUTTON */
+  .page-back-footer {
+    display: flex;
+    justify-content: center;
+    padding: 40px 24px 32px;
+  }
+  .back-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--secondary-container);
+    border: 4px solid var(--on-background);
+    padding: 16px 32px;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    color: var(--on-background);
+    box-shadow: 4px 4px 0 var(--on-background);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .back-all-btn .material-symbols-outlined { font-size: 1.5rem; }
+
+  .note {
+    font-family: var(--font-label);
+    font-size: 11px;
+    color: #888;
+    text-align: center;
+    margin-top: 16px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="browser-bar">PROJECT DETAIL — CLAUDE.MD COLOR SYSTEM</div>
+
+<div class="page">
+
+  <!-- NAV (for context) -->
+  <div class="nav">
+    <div style="display:flex;align-items:center;gap:24px;">
+      <span class="nav-brand">UVA DSSD</span>
+      <div class="nav-links">
+        <span class="nav-link-active">Projects</span>
+        <span class="nav-link">Team</span>
+        <span class="nav-link">Join</span>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <span class="nav-btn nav-btn-primary">Get Involved</span>
+      <span class="nav-btn nav-btn-secondary">Contact</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <a class="back-link" href="#">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Back to Projects
+    </a>
+    <div class="chips-row">
+      <span class="chip-secondary">Sustainability</span>
+      <span class="chip-surface">Status: Active</span>
+    </div>
+    <h1 class="page-title">
+      Renewable Energy Mapping
+      <span class="material-symbols-outlined page-title-icon" style="font-size:3rem;font-variation-settings:'FILL' 1;">bolt</span>
+    </h1>
+    <div class="tags-row">
+      <span class="tag-dark">Python</span>
+      <span class="tag-dark">GIS</span>
+      <span class="tag-dark">Tableau</span>
+    </div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="content-grid">
+
+    <!-- LEFT COLUMN -->
+    <div>
+
+      <!-- HERO IMAGE -->
+      <div class="hero-image">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--primary-container),var(--primary) 60%,var(--on-background));display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.2);font-family:var(--font-label);font-size:11px;letter-spacing:2px;">PROJECT IMAGE</div>
+        <div class="hero-image-overlay"></div>
+        <div class="hero-image-card">
+          <div class="hero-image-card-label">Live Map Data</div>
+          <div class="hero-image-card-text">Real-time solar suitability index mapping for rural Virginia tracts.</div>
+        </div>
+      </div>
+
+      <!-- OVERVIEW -->
+      <div class="section">
+        <h2 class="section-title">Overview</h2>
+        <p class="section-text">Developing a geospatial dashboard to identify optimal locations for micro-grid solar installations across Virginia's rural counties. This project partners with the Virginia Department of Energy to deliver actionable infrastructure recommendations.</p>
+      </div>
+
+      <!-- METHODOLOGY -->
+      <div class="method-card">
+        <div class="method-card-badge">
+          <span class="material-symbols-outlined" style="font-size:18px;">analytics</span>
+        </div>
+        <h2 class="method-card-title">Methodology</h2>
+        <p class="method-card-text">We aggregated satellite imagery, county energy consumption records, and topographical data to build a composite suitability score for each census tract.</p>
+        <p class="method-card-text">A gradient boosting model was trained on known solar farm locations to validate the scoring system. Visualizations were built in Tableau and embedded in a public-facing dashboard accessible to county planners.</p>
+      </div>
+
+      <!-- OUTCOMES -->
+      <div class="section">
+        <h2 class="section-title">Outcomes & Impact</h2>
+        <div class="outcomes-grid">
+          <div class="outcome-card outcome-card-yellow">
+            <div class="outcome-value">12</div>
+            <div class="outcome-label">Counties Mapped</div>
+          </div>
+          <div class="outcome-card outcome-card-blue">
+            <div class="outcome-value">340+</div>
+            <div class="outcome-label">Optimal Sites Identified</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- TEAM -->
+      <div class="sidebar-card sidebar-card-dotted">
+        <h3 class="sidebar-title"><span class="sidebar-title-bg">Team</span></h3>
+        <div class="team-member">
+          <div class="team-avatar team-avatar-primary"></div>
+          <div>
+            <div class="team-name">Alex Chen</div>
+            <div class="team-role">Project Lead</div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-avatar team-avatar-secondary"></div>
+          <div>
+            <div class="team-name">Maya Patel</div>
+            <div class="team-role">GIS Analyst</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TECH STACK -->
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">Tech Stack</h3>
+        <div class="stack-item"><span class="stack-dot"></span>Python (Scikit-Learn, Pandas)</div>
+        <div class="stack-item"><span class="stack-dot"></span>ArcGIS Pro</div>
+        <div class="stack-item"><span class="stack-dot"></span>Tableau Public</div>
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <div class="sidebar-card details-card">
+        <h3 class="sidebar-title">Project Details</h3>
+        <div class="detail-row">
+          <span class="detail-label">Category</span>
+          <span class="detail-value">Sustainability</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Status</span>
+          <span class="detail-value">Active</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Partner</span>
+          <span class="detail-value">VA Dept of Energy</span>
+        </div>
+        <div class="detail-row" style="border-bottom:none;margin-bottom:0;">
+          <span class="detail-label">Timeline</span>
+          <span class="detail-value">Aug 2023 – Present</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-card">
+        <h4 class="cta-title">Ready to contribute?</h4>
+        <p class="cta-text">Join our next sprint to help refine the micro-grid predictive models.</p>
+        <button class="cta-btn">Apply to Team</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BACK TO ALL PROJECTS -->
+  <div class="page-back-footer">
+    <a class="back-all-btn" href="#">
+      Back to All Projects
+      <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+  </div>
+
+</div>
+
+<p class="note">Exact replica of reference layout using CLAUDE.md color tokens</p>
+
+</body>
+</html>

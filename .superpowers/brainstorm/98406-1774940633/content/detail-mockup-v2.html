@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap');
+
+  :root {
+    --surface: #fff5eb;
+    --surface-container-low: #f9efe4;
+    --surface-container: #f1e6db;
+    --surface-container-highest: #e6dbcf;
+    --on-background: #332e28;
+    --inverse-surface: #110e08;
+    --primary: #00a3ff;
+    --primary-container: #0077cc;
+    --on-primary: #ffffff;
+    --secondary: #fef9c3;
+    --outline: #7d766e;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-label: 'Space Grotesk', monospace;
+    --font-body: 'Inter', sans-serif;
+    --shadow-hard: 4px 4px 0px #110e08;
+    --shadow-blue: 4px 4px 0px #00a3ff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #1a1a2e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    font-family: var(--font-body);
+  }
+
+  .browser-label {
+    font-family: var(--font-label);
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+  }
+
+  .page {
+    background: var(--surface);
+    width: 100%;
+    max-width: 860px;
+    color: var(--on-background);
+  }
+
+  /* HERO — light with dots */
+  .hero {
+    background-color: var(--surface-container-low);
+    background-image: radial-gradient(circle, rgba(51,46,40,0.12) 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding: 36px 40px 32px;
+    border-bottom: 2px solid var(--surface-container-highest);
+  }
+
+  .back-btn {
+    display: inline-block;
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--outline);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--outline);
+    padding-bottom: 2px;
+    cursor: pointer;
+  }
+
+  .chips {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .chip-primary {
+    background: var(--primary);
+    color: var(--on-primary);
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    font-weight: 600;
+  }
+
+  .chip-dark {
+    background: var(--inverse-surface);
+    color: var(--surface);
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    font-weight: 600;
+    border: 2px solid var(--secondary);
+  }
+
+  .chip-outline {
+    background: transparent;
+    color: var(--on-background);
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    font-weight: 600;
+    border: 2px solid var(--outline);
+  }
+
+  .hero-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .hero-icon {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--on-background);
+    line-height: 1.1;
+  }
+
+  .hero-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background: var(--inverse-surface);
+    color: var(--surface);
+    font-family: var(--font-label);
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  /* HERO IMAGE */
+  .hero-image {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #0077cc, #00a3ff 60%, #332e28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.25);
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  /* TWO-COLUMN BODY */
+  .body {
+    display: flex;
+  }
+
+  .main-col {
+    flex: 2;
+    padding: 32px 28px 32px 40px;
+    border-right: 2px solid var(--surface-container-highest);
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .section-label {
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .body-text {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--on-background);
+  }
+
+  .methodology-block {
+    border-left: 4px solid var(--surface-container-highest);
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .outcomes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .outcome-card {
+    background: var(--inverse-surface);
+    color: var(--surface);
+    padding: 16px;
+    box-shadow: var(--shadow-blue);
+  }
+
+  .outcome-value {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+  }
+
+  .outcome-label {
+    font-family: var(--font-label);
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    color: var(--surface-container);
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    flex: 1;
+    padding: 28px 20px;
+    background: var(--surface-container-low);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sidebar-label {
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--outline);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .team-member {
+    background: var(--on-background);
+    color: var(--surface);
+    padding: 8px 12px;
+    margin-bottom: 6px;
+  }
+
+  .member-name {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .member-role {
+    font-family: var(--font-label);
+    font-size: 10px;
+    color: var(--outline);
+    margin-top: 2px;
+  }
+
+  .stack-tag {
+    background: var(--inverse-surface);
+    color: var(--surface);
+    font-family: var(--font-label);
+    font-size: 11px;
+    padding: 5px 10px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .details-block {
+    border-top: 2px solid var(--surface-container-highest);
+    padding-top: 16px;
+  }
+
+  .detail-row {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+    color: var(--on-background);
+  }
+
+  .detail-row span {
+    color: var(--outline);
+  }
+
+  /* BACK BUTTON FOOTER */
+  .page-footer {
+    padding: 24px 40px;
+    border-top: 2px solid var(--surface-container-highest);
+    background: var(--surface);
+  }
+
+  .back-button {
+    background: var(--on-background);
+    color: var(--surface);
+    font-family: var(--font-label);
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    display: inline-block;
+    box-shadow: var(--shadow-hard);
+    cursor: pointer;
+    border: none;
+  }
+</style>
+</head>
+<body>
+  <div class="browser-label">http://localhost:5173/projects/renewable-energy</div>
+
+  <div class="page">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="back-btn">← BACK TO PROJECTS</div>
+      <div class="chips">
+        <span class="chip-primary">SUSTAINABILITY</span>
+        <span class="chip-dark">● ACTIVE</span>
+      </div>
+      <div class="hero-title-row">
+        <span class="hero-icon">⚡</span>
+        <h1 class="hero-title">Renewable Energy Mapping</h1>
+      </div>
+      <div class="hero-tags">
+        <span class="tag">Python</span>
+        <span class="tag">GIS</span>
+        <span class="tag">Tableau</span>
+      </div>
+    </div>
+
+    <!-- HERO IMAGE (optional) -->
+    <div class="hero-image">PROJECT IMAGE (optional)</div>
+
+    <!-- BODY -->
+    <div class="body">
+
+      <!-- MAIN -->
+      <div class="main-col">
+
+        <div>
+          <div class="section-label">OVERVIEW</div>
+          <p class="body-text">Developing a geospatial dashboard to identify optimal locations for micro-grid solar installations across Virginia's rural counties. This project partners with the Virginia Department of Energy to deliver actionable infrastructure recommendations.</p>
+        </div>
+
+        <div>
+          <div class="section-label">METHODOLOGY</div>
+          <div class="methodology-block">
+            <p class="body-text">We aggregated satellite imagery, county energy consumption records, and topographical data to build a composite suitability score for each census tract. A gradient boosting model was trained on known solar farm locations to validate the scoring system.</p>
+            <p class="body-text">Visualizations were built in Tableau and embedded in a public-facing dashboard accessible to county planners.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-label">OUTCOMES &amp; IMPACT</div>
+          <div class="outcomes-grid">
+            <div class="outcome-card">
+              <div class="outcome-value">12</div>
+              <div class="outcome-label">COUNTIES MAPPED</div>
+            </div>
+            <div class="outcome-card">
+              <div class="outcome-value">340+</div>
+              <div class="outcome-label">OPTIMAL SITES IDENTIFIED</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+
+        <div>
+          <div class="sidebar-label">TEAM</div>
+          <div class="team-member">
+            <div class="member-name">Alex Chen</div>
+            <div class="member-role">Project Lead</div>
+          </div>
+          <div class="team-member">
+            <div class="member-name">Maya Patel</div>
+            <div class="member-role">GIS Analyst</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-label">TECH STACK</div>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">GIS</span>
+          <span class="stack-tag">Tableau</span>
+        </div>
+
+        <div class="details-block">
+          <div class="sidebar-label">DETAILS</div>
+          <div class="detail-row"><span>Category: </span>Sustainability</div>
+          <div class="detail-row"><span>Status: </span><strong style="color:#00a3ff;">Active</strong></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="page-footer">
+      <button class="back-button">← BACK TO ALL PROJECTS</button>
+    </div>
+
+  </div>
+</body>
+</html>
