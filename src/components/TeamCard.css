@@ -17,6 +17,23 @@
   left: var(--space-3);
 }
 
+.team-card__linkedin {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  color: var(--surface);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.team-card__linkedin:hover {
+  color: var(--primary);
+}
+
+.team-card:hover .team-card__linkedin {
+  opacity: 1;
+}
+
 .team-card__name {
   font-family: var(--font-headline);
   font-size: var(--body-lg);

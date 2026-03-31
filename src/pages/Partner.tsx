@@ -9,7 +9,7 @@ const HERO_IMG =
 export default function Partner() {
   return (
     <div className="page-partner">
-      <section className="partner-hero">
+      <section className="partner-hero page-hero--dots">
         <div className="partner-hero__inner container">
           <div className="partner-hero__text">
             <Reveal variant="slide-right" delayMs={40}>
@@ -158,11 +158,6 @@ export default function Partner() {
             <Reveal variant="swing-in-left" delayMs={120} className="partner-bottom-cta__btn-reveal">
               <Link to="/join" className="partner-bottom-cta__btn partner-bottom-cta__btn--primary label">
                 Start a Conversation
-              </Link>
-            </Reveal>
-            <Reveal variant="swing-in-right" delayMs={280} className="partner-bottom-cta__btn-reveal">
-              <Link to="/join" className="partner-bottom-cta__btn partner-bottom-cta__btn--surface label">
-                Join Our Team
               </Link>
             </Reveal>
           </div>

@@ -3,13 +3,14 @@ export interface TeamMember {
   role: string
   tag: string
   tagVariant: 'dark' | 'accent'
+  linkedinUrl?: string
 }
 
 export const executiveBoard: TeamMember[] = [
-  { name: 'Ethan Carter', role: 'Director of Technology', tag: 'Leadership', tagVariant: 'accent' },
-  { name: 'Maya Rodriguez', role: 'Project Coordinator', tag: 'Operations', tagVariant: 'dark' },
-  { name: 'Julian Smith', role: 'Head of Data Ethics', tag: 'Research', tagVariant: 'dark' },
-  { name: 'Sarah Chen', role: 'Outreach Director', tag: 'Community', tagVariant: 'dark' },
+  { name: 'Vinith Jayamani', role: 'President', tag: 'Leadership', tagVariant: 'accent', linkedinUrl: 'https://www.linkedin.com/in/vinith-jayamani/' },
+  { name: 'Winston Shek', role: 'President of Technology', tag: 'Technology', tagVariant: 'dark', linkedinUrl: 'https://www.linkedin.com/in/winston-shek/' },
+  { name: 'Dhruv Sarang', role: 'President of Business Development', tag: 'Business', tagVariant: 'dark', linkedinUrl: 'https://www.linkedin.com/in/dhruv-sarang/' },
+  { name: 'Siddharth Laks', role: 'VP of Business Development', tag: 'Business', tagVariant: 'dark', linkedinUrl: 'https://www.linkedin.com/in/siddharth-laks/' },
 ]
 
 export const corePillars = [

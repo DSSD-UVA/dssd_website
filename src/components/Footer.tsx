@@ -6,9 +6,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__inner container">
         <div className="footer__brand">
-          <p className="footer__logo label">DSSD @ UVA</p>
+          <p className="footer__logo label">DSSD</p>
           <p className="footer__tagline">
-            The UVA chapter of Data Science for Sustainable Development.
+            Data Science for Sustainable Development.
             Engineering data for a better future.
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
           <div className="footer__col">
             <span className="footer__link label">Contact</span>
-            <span className="footer__link label">UVA Data Science</span>
+            <span className="footer__link label">Data Science</span>
             <span className="footer__link label">Privacy Policy</span>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="footer__copyright label">
-            &copy; 2024 UVA Data Science for Sustainable Development. Built with Academic Brutalism.
+            &copy; 2026 Data Science for Sustainable Development. Built with Academic Brutalism.
           </p>
         </div>
       </div>

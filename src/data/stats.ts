@@ -1,8 +1,8 @@
 /** Material Symbols ligature names */
 export const homeStats = [
-  { icon: 'rocket_launch', value: '15+', label: 'Projects Completed' },
-  { icon: 'groups', value: '50+', label: 'Active Members' },
-  { icon: 'language', value: '8', label: 'Global Partners' },
+  { icon: 'rocket_launch', value: '5+', label: 'Active Projects' },
+  { icon: 'groups', value: '15+', label: 'Active Members' },
+  { icon: 'language', value: '7', label: 'Global Partners' },
   { icon: 'database', value: '10k+', label: 'Data Points Mapped' },
 ]
 
@@ -17,6 +17,6 @@ export const faqItems = [
   },
   {
     question: 'Who can join?',
-    answer: 'Any UVA student — undergraduate or graduate — from any major. Sustainability needs diverse perspectives!',
+    answer: 'Any student — undergraduate or graduate — from any major. Sustainability needs diverse perspectives!',
   },
 ]

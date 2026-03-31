@@ -26,7 +26,7 @@ export default function Projects() {
           <Reveal variant="slide-left" delayMs={200}>
             <p className="projects-hero__subtitle">
               Applying rigorous data science methodologies to solve pressing social
-              and environmental challenges within the UVA community and beyond.
+              and environmental challenges in our communities and beyond.
             </p>
           </Reveal>
         </div>
@@ -94,15 +94,14 @@ export default function Projects() {
                 build something sustainable together.
               </p>
               <div className="projects-cta__actions">
-                <Button>Submit Inquiry</Button>
-                <Button to="/join" variant="outline">Join the Team</Button>
+                <Button to="/partner">Submit Inquiry</Button>
               </div>
             </div>
           </Reveal>
           <Reveal variant="swing-in-right" delayMs={160}>
             <div className="projects-cta__stat">
-              <p className="projects-cta__stat-value">12+</p>
-              <p className="projects-cta__stat-label label">Active Partners</p>
+              <p className="projects-cta__stat-value">7</p>
+              <p className="projects-cta__stat-label label">Global Partners</p>
             </div>
           </Reveal>
         </div>

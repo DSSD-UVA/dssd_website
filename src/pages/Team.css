@@ -151,6 +151,7 @@
 .pillars {
   padding-top: var(--space-16);
   padding-bottom: var(--space-20);
+  background-color: var(--secondary-container);
 }
 
 .pillars__inner {
@@ -228,10 +229,12 @@
 .team-cta {
   padding-top: var(--space-16);
   padding-bottom: var(--space-20);
+  background-color: var(--on-background);
+  color: var(--surface);
 }
 
 .team-cta__card {
-  border: 2px solid var(--on-primary-fixed);
+  border: 2px solid var(--surface-container-highest);
   padding: var(--space-12);
   text-align: center;
   max-width: 600px;

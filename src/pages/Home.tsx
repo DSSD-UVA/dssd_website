@@ -15,7 +15,7 @@ export default function Home() {
         <div className="hero__inner container">
           <div className="hero__content">
             <Reveal variant="slide-right" delayMs={40}>
-              <Chip label="Est. at UVA" variant="accent" elevated />
+              <Chip label="Student-Run Organization" variant="accent" elevated />
             </Reveal>
             <Reveal variant="rise-blur" slow delayMs={100}>
               <h1 className="hero__title">
@@ -25,7 +25,7 @@ export default function Home() {
             </Reveal>
             <Reveal variant="slide-left" delayMs={200}>
               <p className="hero__subtitle">
-                We're a student-run club at UVA that uses data science to tackle
+                We're a student-run organization that uses data science to tackle
                 real-world sustainability challenges. Our members collaborate on
                 projects with local organizations, non-profits, and government
                 agencies.
@@ -36,17 +36,14 @@ export default function Home() {
                 <Button to="/projects" size="large">
                   Explore Our Projects
                 </Button>
-                <Button to="/join" variant="surface" size="large">
-                  Apply to Join
-                </Button>
               </div>
             </Reveal>
           </div>
           <Reveal variant="fade-up" delayMs={400}>
             <div className="hero__partner">
-              <span className="hero__partner-label label">Partnered with</span>
+              <span className="hero__partner-label label">Driven by</span>
               <span className="hero__partner-rule" aria-hidden />
-              <span className="hero__partner-name">University of Virginia</span>
+              <span className="hero__partner-name">Data for Good</span>
             </div>
           </Reveal>
         </div>
@@ -109,7 +106,7 @@ export default function Home() {
           <Reveal variant="slide-right" delayMs={140}>
             <p className="home-cta__text">
               We are always looking for passionate data scientists, developers, and
-              designers to join our club at UVA.
+              designers to join our team.
             </p>
           </Reveal>
           <Reveal variant="zoom-pop" delayMs={280}>

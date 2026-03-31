@@ -22,7 +22,7 @@ export default function Team() {
             </Reveal>
             <Reveal variant="slide-left" delayMs={200}>
               <p className="team-hero__subtitle">
-                We are a multidisciplinary collective of UVA students dedicated to
+                We are a multidisciplinary collective of students dedicated to
                 using data science as a tool for humanitarian impact and
                 sustainable development.
               </p>
@@ -34,40 +34,11 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="partnership">
-        <div className="partnership__inner container">
-          <Reveal variant="slide-left" delayMs={0}>
-            <div className="partnership__badge">
-              <span className="partnership__icon-box" aria-hidden>
-                <svg
-                  className="partnership__mark-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12 3.75 15.6 8.35 12 11.9 8.4 8.35 12 3.75z" />
-                  <rect x="11.2" y="11.4" width="1.6" height="5.35" />
-                  <path d="M11.2 16.75 4.25 20.35 5.85 22.25 12 18.45 11.2 16.75z" />
-                  <path d="M12.8 16.75 19.75 20.35 18.15 22.25 12 18.45 12.8 16.75z" />
-                </svg>
-              </span>
-              <span className="label">Official Partnership</span>
-            </div>
-          </Reveal>
-          <Reveal variant="slide-right" delayMs={120}>
-            <p className="partnership__quote">
-              "Bridging the gap between academic rigor and global sustainability in
-              partnership with the <strong>UVA School of Data Science.</strong>"
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
       <section className="board container">
         <Reveal variant="skew-up">
           <div className="board__header">
             <h2 className="board__title">Executive Board</h2>
-            <span className="board__year label">2023 - 2024</span>
+            <span className="board__year label">2025 – 2026</span>
           </div>
         </Reveal>
         <div className="board__grid">
@@ -79,8 +50,8 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="pillars container">
-        <div className="pillars__inner">
+      <section className="pillars">
+        <div className="pillars__inner container">
           <Reveal variant="slide-right">
             <div className="pillars__intro">
               <h2 className="pillars__title">Our Core<br />Pillars</h2>
@@ -109,20 +80,21 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="team-cta container">
-        <Reveal variant="zoom-pop" slow>
-          <div className="team-cta__card">
-            <h2 className="team-cta__title">Ready to make an impact?</h2>
-            <p className="team-cta__text">
-              We are always looking for passionate students to join our research
-              pods and development cycles.
-            </p>
-            <div className="team-cta__actions">
-              <Button to="/join">Apply to Join</Button>
-              <Button to="/projects" variant="outline">View Open Projects</Button>
+      <section className="team-cta">
+        <div className="container">
+          <Reveal variant="zoom-pop" slow>
+            <div className="team-cta__card">
+              <h2 className="team-cta__title">Ready to make an impact?</h2>
+              <p className="team-cta__text">
+                We are always looking for passionate students to join our research
+                pods and development cycles.
+              </p>
+              <div className="team-cta__actions">
+                <Button to="/projects">View Open Projects</Button>
+              </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
     </div>
   )

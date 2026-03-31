@@ -15,7 +15,7 @@ export default function Join() {
         <div className="join-hero__inner container">
           <Reveal variant="slide-right" delayMs={40}>
             <Chip
-              label={appStatus.applicationsOpen ? `Applications Open: Spring 2024` : 'Applications Closed'}
+              label={appStatus.applicationsOpen ? `Applications Open: Spring 2026` : 'Applications Closed'}
               variant={appStatus.applicationsOpen ? 'accent' : 'dark'}
             />
           </Reveal>
@@ -27,7 +27,7 @@ export default function Join() {
           </Reveal>
           <Reveal variant="slide-left" delayMs={200}>
             <p className="join-hero__subtitle">
-              DSSD at UVA empowers students to tackle real-world sustainability
+              DSSD empowers students to tackle real-world sustainability
               challenges through data-driven research. Apply to join our
               interdisciplinary teams and make a tangible impact.
             </p>
