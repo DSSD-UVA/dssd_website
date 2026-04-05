@@ -6,13 +6,15 @@ interface TeamCardProps {
   role: string
   tag: string
   tagVariant?: 'dark' | 'accent'
+  imageUrl?: string
+  imagePosition?: string
   linkedinUrl?: string
 }
 
-export default function TeamCard({ name, role, tag, tagVariant = 'dark', linkedinUrl }: TeamCardProps) {
+export default function TeamCard({ name, role, tag, tagVariant = 'dark', imageUrl, imagePosition, linkedinUrl }: TeamCardProps) {
   return (
     <div className="team-card">
-      <div className="team-card__image">
+      <div className="team-card__image" style={imageUrl ? { backgroundImage: `url(${imageUrl})`, backgroundPosition: imagePosition || 'center top' } : undefined}>
         <div className="team-card__tag">
           <Chip label={tag} variant={tagVariant} />
         </div>

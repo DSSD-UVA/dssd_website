@@ -5,6 +5,8 @@
 .team-card__image {
   height: 220px;
   background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  background-size: cover;
+  background-position: center top;
   position: relative;
   display: flex;
   align-items: flex-end;
