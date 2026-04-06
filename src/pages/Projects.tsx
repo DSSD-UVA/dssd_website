@@ -78,7 +78,7 @@ export default function Projects() {
               We are always looking for new partnerships with non-profits and
               community organizations.
             </p>
-            <Button variant="secondary">Propose a Project</Button>
+            <Button to="/join" variant="secondary">Propose a Project</Button>
           </div>
         </Reveal>
       </section>

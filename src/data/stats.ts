@@ -13,7 +13,7 @@ export const faqItems = [
   },
   {
     question: 'What is the time commitment?',
-    answer: 'Most members spend 3-5 hours per week on projects. General body meetings are bi-weekly on Tuesday evenings.',
+    answer: 'Most members spend 3-5 hours per week on projects. General body meetings are weekly on Monday evenings.',
   },
   {
     question: 'Who can join?',

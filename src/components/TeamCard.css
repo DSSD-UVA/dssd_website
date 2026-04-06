@@ -23,7 +23,7 @@
   position: absolute;
   top: var(--space-3);
   right: var(--space-3);
-  color: var(--surface);
+  color: var(--on-background);
   opacity: 0;
   transition: opacity 0.2s ease;
 }

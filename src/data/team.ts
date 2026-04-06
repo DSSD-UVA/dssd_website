@@ -11,11 +11,11 @@ export interface TeamMember {
 }
 
 export const executiveBoard: TeamMember[] = [
-  { name: 'Vinith Jayamani', role: 'President', tag: 'Leadership', tagVariant: 'accent', linkedinUrl: 'https://www.linkedin.com/in/vinith-jayamani/'},
+  { name: 'Vinith Jayamani', role: 'President', tag: 'Leadership', tagVariant: 'accent', linkedinUrl: 'https://www.linkedin.com/in/vinith-jayamani/', imageUrl: '/headshots/vinith-jayamani.jpeg', imagePosition: 'center 50%' },
   { name: 'Winston Shek', role: 'President of Technology', tag: 'Technology', tagVariant: 'dark', linkedinUrl: 'https://www.linkedin.com/in/winston-shek/', imageUrl: '/headshots/winston-shek.jpeg', imagePosition: 'center 0%' },
-  { name: 'Dhruv Sarang', role: 'President of Business Development', tag: 'Business', tagVariant: 'dark', linkedinUrl: 'https://www.linkedin.com/in/dhruv-sarang/', imageUrl: '/headshots/dhruv-sarang.jpeg', imagePosition: 'center 30%' },
+  { name: 'Dhruv Sarang', role: 'President of Business', tag: 'Business', tagVariant: 'dark', linkedinUrl: 'https://www.linkedin.com/in/dhruv-sarang/', imageUrl: '/headshots/dhruv-sarang.jpeg', imagePosition: 'center 30%' },
   { name: 'Ava Lawless', role: 'President of Data Science', tag: 'Data', tagVariant: 'dark', imageUrl: '/headshots/ava-lawless.jpeg', imagePosition: 'center 10%', linkedinUrl: 'https://www.linkedin.com/in/ava-lawless-b2513935a/' },
-  { name: 'Siddharth Laks', role: 'VP of Business Development', tag: 'Business', tagVariant: 'dark', linkedinUrl: 'https://www.linkedin.com/in/siddharth-laks/' },
+  { name: 'Siddharth Laks', role: 'VP of Business', tag: 'Business', tagVariant: 'dark', linkedinUrl: 'https://www.linkedin.com/in/siddharth-laks/', imageUrl: '/headshots/siddharth-laks.jpeg', imagePosition: 'center 20%' },
   { name: 'Meneja Gautam', role: 'Project Lead', tag: 'Projects', tagVariant: 'dark', imageUrl: '/headshots/meneja-gautam.jpeg', imagePosition: 'center 30%', linkedinUrl: 'https://www.linkedin.com/in/meneja-gautam-53064a194/'},
   { name: 'Sahvir Bhaskaruni', role: 'Project Lead', tag: 'Projects', tagVariant: 'dark', imageUrl: '/headshots/sahvir-bhaskaruni.heic', imagePosition: 'center 10%', linkedinUrl: 'https://www.linkedin.com/in/sahvir-bhaskaruni/' },
 ]

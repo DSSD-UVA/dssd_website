@@ -46,7 +46,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="footer__copyright label">
-            &copy; 2026 Data Science for Sustainable Development. Built with Academic Brutalism.
+            &copy; 2026 Data Science for Sustainable Development. Built by Ishan A & Meneja G.
           </p>
         </div>
       </div>

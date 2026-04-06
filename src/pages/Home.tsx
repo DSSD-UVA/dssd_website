@@ -106,7 +106,7 @@ export default function Home() {
           <Reveal variant="slide-right" delayMs={140}>
             <p className="home-cta__text">
               We are always looking for passionate data scientists, developers, and
-              designers to join our team.
+              consultants to join our team.
             </p>
           </Reveal>
           <Reveal variant="zoom-pop" delayMs={280}>
